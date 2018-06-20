@@ -4,7 +4,7 @@ django-pyodbc
 |version|_ 
 
 .. |version| image:: http://img.shields.io/pypi/v/django-pyodbc.svg?style=flat
-.. _version: https://pypi.python.org/pypi/django-pyodbc
+.. _version: https://pypi.org/project/django-pyodbc
 
 django-pyodbc is a `Django <http://djangoproject.com>`_ SQL Server DB backend powered by the `pyodbc <https://github.com/mkleehammer/pyodbc>`_ library. pyodbc is a mature, viable way to access SQL Server from Python in multiple platforms and is actively maintained. It's also used by SQLAlchemy for SQL Server connections.
 
@@ -27,7 +27,7 @@ Features
 
 TODO
 --------
-* [ ] Python 3 support. See [#47](https://github.com/lionheart/django-pyodbc/issues/47) for details.
+* [ ] Python 3 support. See `#47 <https://github.com/lionheart/django-pyodbc/issues/47>`_ for details.
 
 Installation
 ------------

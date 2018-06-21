@@ -221,6 +221,19 @@ class DatabaseOperations(BaseDatabaseOperations):
         )
         return sql, []
 
+    def adapt_datefield_value(self, value):
+        """
+        Transforms a date value to an object compatible with what is expected
+        by the backend driver for date columns.
+        """
+        return value
+
+    def adapt_datetimefield_value(self, value):
+        """
+        This method was to implemented in BaseDatabaseOperations
+        """
+        return value
+
     def field_cast_sql(self, db_type, internal_type=None):
         """
         Given a column type (e.g. 'BLOB', 'VARCHAR'), returns the SQL necessary

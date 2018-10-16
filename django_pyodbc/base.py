@@ -73,6 +73,8 @@ except ImportError:
     # import location prior to Django 1.8
     from django.db.backends import BaseDatabaseWrapper, BaseDatabaseFeatures, BaseDatabaseValidation
 from django.db.backends.signals import connection_created
+from django.db.backends.utils import CursorWrapper as DjangoCursorWrapper
+
 
 from django.conf import settings
 from django import VERSION as DjangoVersion
@@ -421,7 +423,7 @@ class DatabaseWrapper(BaseDatabaseWrapper):
         self.check_constraints()
 
 
-class CursorWrapper(object):
+class CursorWrapper(DjangoCursorWrapper):
     """
     A wrapper around the pyodbc's cursor that takes in account a) some pyodbc
     DB-API 2.0 implementation and b) some common ODBC driver particularities.
